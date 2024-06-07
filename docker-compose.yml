@@ -1,0 +1,12 @@
+services:
+  node:
+    image: php:latest
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/app:rw
+    working_dir: /app
+    container_name: php
+    entrypoint: php -S 0.0.0.0:8080 index.php
+    
+    # entrypoint: npm run dev
